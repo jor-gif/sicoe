@@ -1,0 +1,32 @@
+INICIO
+
+    Repetir
+        Escribir "Ingrese la cantidad de productos a registrar:"
+        Leer cantidadProductos
+    Hasta Que cantidadProductos > 0
+
+    Crear listaProductos
+
+    Para i ← 1 Hasta cantidadProductos Hacer
+
+        Escribir "Ingrese el nombre del producto:"
+        Leer nombre
+
+        Repetir
+            Escribir "Ingrese el tiempo de caducidad (1 a 365 días):"
+            Leer tiempoCaducidad
+        Hasta Que tiempoCaducidad >= 1 Y tiempoCaducidad <= 365
+
+        Guardar (nombre, tiempoCaducidad) en listaProductos
+
+    Fin Para
+
+    Ordenar listaProductos por tiempoCaducidad de menor a mayor
+
+    Escribir "Plan de envío prioritario:"
+
+    Para cada producto en listaProductos Hacer
+        Escribir producto.nombre, producto.tiempoCaducidad
+    Fin Para
+
+FIN
